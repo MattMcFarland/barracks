@@ -29,7 +29,7 @@ function dispatcher (hooks) {
   var subsCalled = false
 
   const subscriptions = start._subscriptions = {}
-  const reducers = start._reducers = {}
+  const reducers = start._reducers = { refresh: (data, state) => state }
   const effects = start._effects = {}
   const models = start._models = []
   var _state = {}
